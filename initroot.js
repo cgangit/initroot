@@ -18,17 +18,17 @@
       if("undefined" != typeof(intvw) && intvw){
         vw = intvw;
       }
-      //当窗口宽度小于所设定宽度时，设置窗口宽度为渲染宽度
+      //当窗口宽度小于所设定宽度时，设置窗口宽度为渲染宽度。
       if (vw > doc.documentElement.clientWidth) {
         vw = doc.documentElement.clientWidth;
       }
-    //当未传入参数时获取body宽度为渲染宽度
+    //当未传入参数时获取body宽度为渲染宽度。
     }else if ("undefined" != typeof(document.body.clientWidth)) {
       vw = document.body.clientWidth;
     }
-    //将视图宽度20等分
+    //将视图宽度20等分。
     font = vw / 20;
-    //如果存在样式表则删除
+    //如果存在样式表则删除。
     if (sheet.cssRules.length) {
       if (sheet.deleteRule) {
         sheet.deleteRule(0);
@@ -36,7 +36,7 @@
         sheet.removeRule(0);
       }
     }
-    //设置根字体大小样式
+    //设置根字体大小样式。
     if (sheet.insertRule) {
       sheet.insertRule("html { font-size: " + font + "px}", 0);
     } else if (sheet.addRule) {
@@ -47,7 +47,7 @@
     return;
   }
   introot(win.document);
-  //为加载完成事件和重置窗口大小事件绑定初始化根结点字体大小函数
+  //为加载完成事件和重置窗口大小事件绑定初始化根结点字体大小函数。
   if (win.addEventListener) {
     /*win.addEventListener("load", function() {
       introot(win.document);
