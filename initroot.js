@@ -1,6 +1,8 @@
 ﻿/**
- *v1.0
- *将视图（body）宽度1/20设置为html结点字体大小即视图宽度为20rem。
+ * @auther freeman
+ * @version 1.0.0
+ * @date 2018.03.01
+ * 将视图（body）宽度1/20设置为html结点字体大小即视图宽度为20rem。
  */
 ;(function(win) {
   //创建样式表
