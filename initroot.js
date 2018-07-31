@@ -15,7 +15,7 @@
   function introot(doc) {
     var font = 16;
     var vw = 640;
-    //当传入参数时获取页面设定的渲染宽度（由于该脚本执行时body并未渲染，所以无法获取body宽度）
+    //当传入参数时获取页面设定的渲染宽度（由于该脚本执行时body并未渲染，所以无法获取body宽度。）
     if (arguments.length) {
       var intvw = doc.documentElement.getAttribute("data-vw");
       if("undefined" != typeof(intvw) && intvw){
@@ -52,9 +52,9 @@
   introot(win.document);
   //为加载完成事件和重置窗口大小事件绑定初始化根结点字体大小函数。
   if (win.addEventListener) {
-    /*win.addEventListener("load", function() {
+    win.addEventListener("load", function() {
       introot(win.document);
-    }, false);*/
+    }, false);
     win.addEventListener("resize", function() {
       introot(win.document);
     }, false);
